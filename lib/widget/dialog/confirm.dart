@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 
 class ConfirmDialog extends StatefulWidget {
-  ConfirmDialog({Key? key, this.stateTest, required this.notifyParent}) : super(key: key);
-  final stateTest;
-  final Function() notifyParent;
+  ConfirmDialog({Key? key}) : super(key: key);
 
   @override
   State<ConfirmDialog> createState() => _ConfirmDialogState();
@@ -19,11 +17,11 @@ class _ConfirmDialogState extends State<ConfirmDialog> {
           child : Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextButton( child : Text('취소' + widget.stateTest.toString()), onPressed : () {
+                TextButton( child : Text('취소'), onPressed : () {
                   Navigator.pop(context);
                 }),
                 TextButton( child : Text('완료'), onPressed : () {
-                  widget.notifyParent();
+
                 })
               ]
           )

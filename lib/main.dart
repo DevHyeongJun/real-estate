@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './layout/top.dart';
-import './layout/body.dart';
-import './layout/bottom.dart';
-import './widget/dialog/confirm.dart';
+import './route/watchlistRoute.dart';
 
 //앱 실행. java main =
 void main() => runApp(
@@ -23,8 +20,8 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body : BodyLayout(),
-        bottomNavigationBar: BottomLayout()
+      body : WatchlistRoute()
+        // bottomNavigationBar: BottomLayout()
     );
   }
 }
